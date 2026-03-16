@@ -1,0 +1,78 @@
+/*
+==全域重設(Reset)
+將所有元素的內外距設為0, 避免瀏覽器預設樣式影響版面 
+*/
+* {
+    padding: 0; /* 內邊距歸零 */
+    margin: 0; /* 外邊距歸零 */
+}
+
+/* 頁首 header 設定 */
+header {
+    background-color: rgba(35, 28, 26, 0.8); /* 半透明深棕色背景, rgba最後一碼 0.8 代表透明度 */
+    height: 80px; /* 頁首高度 */
+    width: 100%; /* 滿版寬度 */
+    position: fixed; /* 固定在畫面上方, 捲動頁面時不會移動 */
+}
+
+/* 網站主標題(Logo技巧) */
+h1 {
+    color: white; /* 備用文字顏色(實際會被隱藏) */
+    position: absolute; /* 絕對定位, 方便放在 header 指定位置 */
+    left: 120px; /* 距離左側 120px */
+    top: 0; /* 貼齊 header 上方 */
+    line-height: 80px; /* 與 header 高度一致垂直置中技巧 */
+    background-image: url(images/logo.png); /* 使用背景圖當 Logo */
+    background-repeat: no-repeat; /* 不重複 */
+    background-position: center; /* Logo 置中 */
+    width: 210px; /* Logo 區塊寬度 */
+    text-indent: -9999px; /* 把文字推到畫面外, 達到「只顯示Logo圖」的效果 */
+}
+
+/* 導覽列容器 */
+header ul {
+    position: absolute; /* 固定在 header 右側 */
+    right: 5vw; /* 距離右側5%視窗寬(RWD單位) */
+    top: 0;
+    line-height: 80px; /* 與 header 同高 垂直置中 */
+}
+
+/* 導覽列項目橫排 */
+header li {
+    display: inline; /* 讓li 橫向排列 */
+    margin-right: 4vw; /* 每個選單間距(視窗寬度單位) */
+}
+
+/* 導覽連結樣式 */
+header a {
+    color: white; /* 連結文字白色 */
+    text-decoration: none; /* 移除底線 */
+}
+
+/* 滑鼠移上去效果 */
+header a:hover {
+    text-decoration: underline; /* hover 時出現底線 */
+}
+
+/* Hero Banner區 */
+.news {
+    background-color: antiquewhite; /* 備用底色(圖片載入失敗時) */
+    color: white;
+    height: 80vh; /* 高度=視窗高度80%, Hero 區常用技巧 */
+    background-image: url("images/banner.png"); /* Banner圖 */
+    background-repeat: no-repeat;
+    background-size: cover; /* 圖片滿版關鍵 */
+    background-position: center; /* 圖片置中裁切 */
+    display: flex; /* 啟用 flex */
+    flex-direction: column; /* 內容上下排列 */
+    align-items: center; /* 水平置中 */
+    justify-content: center; /* 垂直置中 */
+}
+
+/* Hero 主標 */
+.news h2 {
+    font-size: 60px; /* 大標題 */
+    margin-top: 60px;
+}
+
+/* Hero

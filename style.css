@@ -1,4 +1,8 @@
 /* style.css */
+*{
+    margin: 10px;
+    padding: 10px;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
