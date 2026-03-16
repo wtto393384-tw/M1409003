@@ -1,0 +1,51 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+section {
+    padding: 1em;
+}
+article {
+    padding: 1em;
+    background-color: #f9f9f9;
+}
+aside {
+    padding: 1em;
+    background-color: #e7e7e7;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+nav a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+/* 表格外框改為藍色 */
+table {
+    border-collapse: collapse;
+    border: 2px solid blue;
+}
+
+th, td {
+    border: 1px solid rgb(0, 255, 170);
+}
