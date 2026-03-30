@@ -29,6 +29,18 @@ h1 {
     text-indent: -9999px; /* 把文字推到畫面外, 達到「只顯示Logo圖」的效果 */
 }
 
+h1.no-bg-logo {
+    background-image: none; /* 取消原本的 Logo 圖 */
+    text-indent: 0; /* 把文字叫回畫面上 */
+    color: white; /* 關鍵：改成白色才看得清楚！ */
+    position: absolute; /* 保持絕對定位 */
+    left: 30px; /* 距離左邊 30px，你可以自己調整數字看效果 */
+    top: 0;
+    line-height: 80px; /* 跟右邊的選單一樣維持垂直置中 (假設 header 高度是 80px) */
+    font-size: 24px; /* 設定一個好看的標題大小 */
+    margin: 0; /* 清除預設的外距 */
+}
+
 /* 導覽列容器 */
 header ul {
     position: absolute; /* 固定在 header 右側 */
@@ -75,4 +87,13 @@ header a:hover {
     margin-top: 60px;
 }
 
-/* Hero
+/* Hero */
+
+/* 修改 下方footer*/
+footer {
+    background-color: #4a423f; /* 使用跟上方導覽列相近的深褐色 */
+    color: white; /* 文字變白色 */
+    text-align: center; /* 文字置中 */
+    padding: 20px 0; /* 增加上下空間，讓它不要太擁擠 */
+    width: 100%;
+}
