@@ -97,3 +97,111 @@ footer {
     padding: 20px 0; /* 增加上下空間，讓它不要太擁擠 */
     width: 100%;
 }
+
+/* --- 標語區塊 (.slogan) 簡單置中 --- */
+.slogan {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f6f0; /* 溫暖的淺米色背景 */
+    font-size: 20px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* --- 店鋪資訊 (.shop) 左圖右文 --- */
+.shop {
+    display: flex; /* 啟動橫向排列 */
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 關鍵1：讓裡面的圖片跟文字在畫面正中間 */
+    gap: 60px; /* 圖片跟文字的間距稍微拉大，配合放大的比例 */
+    padding: 60px 20px;
+    max-width: 1200px; /* 關鍵2：限制整個區塊的最大寬度 */
+    margin: 0 auto; /* 關鍵3：讓這個區塊自己也在網頁正中央 */
+}
+
+.shop img {
+    width: 500px; /* 這裡把圖片固定放大到 500px */
+    border-radius: 10px;
+    flex-shrink: 0; /* 關鍵4：防止螢幕變小時圖片被文字擠壓變形 */
+}
+
+.shop .info {
+    max-width: 500px; /* 讓文字區塊的最大寬度跟圖片差不多，視覺上會最平衡 */
+}
+
+/* --- 標題與內文放大 --- */
+.shop .info h2 {
+    font-size: 32px; /* 標題放大 */
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.shop .info p {
+    font-size: 18px; /* 內文放大 */
+    line-height: 1.8; /* 增加行距，讓變大的字不會擠在一起 */
+    color: #555;
+}
+
+/* --- 產品卡片區 (.product) 三欄並排 (紅色框框的效果) --- */
+.product {
+    display: flex; /* 啟動橫向排列 */
+    justify-content: space-between; /* 讓卡片左右均勻散開 */
+    gap: 20px; 
+    padding: 60px 10%; /* 上下 60px，左右縮排 10% */
+    background-color: #f5f5f5; /* 淺灰色背景，讓白底卡片凸顯出來 */
+}
+
+.product div {
+    background-color: white; /* 卡片白底 */
+    width: 32%; /* 每個卡片佔三分之一左右 */
+    border-radius: 8px; /* 卡片圓角 */
+    overflow: hidden; /* 確保裡面的圖片不會超出圓角 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 加上淡淡的立體陰影 */
+}
+
+.product img {
+    width: 100%;
+    height: 220px; /* 固定圖片高度 */
+    object-fit: cover; /* 自動裁切填滿，圖片不變形 */
+    display: block;
+}
+
+.product h3 {
+    margin: 20px 15px 10px 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.product p {
+    margin: 0 15px 20px 15px;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- 電子報訂閱 (.newsletter) --- */
+.newsletter {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.newsletter input {
+    padding: 12px;
+    width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 12px 25px;
+    background-color: #4a423f; /* 配合你 Footer 的深褐色 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #332d2b; /* 滑鼠移過去變深一點 */
+}
