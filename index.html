@@ -8,8 +8,9 @@
 </head>
 <body>
     <header>
+        <button class="menu">&#9776;</button>
+        
         <h1 class="no-bg-logo">嘉南藥理大學</h1>
-        <!-- 使用網路上圖片的 URL，請改成實際可用的連結 -->
 
         <ul>
             <li><a href="20260309.html">前往 2026年3月9日 練習頁面</a></li>
@@ -18,11 +19,22 @@
             <li><a href="CulinaryS.html">烘培工坊</a></li>
         </ul>
     </header>
+    
     <main>
-        <img src="IMG/pic.jpg" alt="嘉南藥理大學" />
+        <img src="IMG/pic.jpg" alt="嘉南藥理大學" style="width: 100%; display: block;" />
     </main>
+    
     <footer>
         <p> 2026 嘉南藥理大學 版權所有</p>
     </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.menu');
+        const menuList = document.querySelector('header ul');
+
+        menuBtn.addEventListener('click', () => {
+            menuList.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

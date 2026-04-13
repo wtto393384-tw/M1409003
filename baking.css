@@ -1,6 +1,7 @@
 /*
 ==全域重設(Reset)
-將所有元素的內外距設為0, 避免瀏覽器預設樣式影響版面 
+將所有元素的內外距設為0,
+避免瀏覽器預設樣式影響版面 
 */
 * {
     padding: 0; /* 內邊距歸零 */
@@ -9,7 +10,7 @@
 
 /* 頁首 header 設定 */
 header {
-    background-color: rgba(35, 28, 26, 0.8); /* 半透明深棕色背景, rgba最後一碼 0.8 代表透明度 */
+    background-color: rgba(35, 28, 26, 0.8); /* 半透明深棕色背景 */
     height: 80px; /* 頁首高度 */
     width: 100%; /* 滿版寬度 */
     position: fixed; /* 固定在畫面上方, 捲動頁面時不會移動 */
@@ -17,11 +18,11 @@ header {
 
 /* 網站主標題(Logo技巧) */
 h1 {
-    color: white; /* 備用文字顏色(實際會被隱藏) */
-    position: absolute; /* 絕對定位, 方便放在 header 指定位置 */
+    color: white; /* 備用文字顏色 */
+    position: absolute; /* 絕對定位 */
     left: 120px; /* 距離左側 120px */
     top: 0; /* 貼齊 header 上方 */
-    line-height: 80px; /* 與 header 高度一致垂直置中技巧 */
+    line-height: 80px; /* 垂直置中技巧 */
     background-image: url(images/logo.png); /* 使用背景圖當 Logo */
     background-repeat: no-repeat; /* 不重複 */
     background-position: center; /* Logo 置中 */
@@ -30,21 +31,16 @@ h1 {
 }
 
 h1.no-bg-logo {
-    background-image: none; /* 取消原本的 Logo 圖 */
-    text-indent: 0; /* 把文字叫回畫面上 */
-    color: white; /* 關鍵：改成白色才看得清楚！ */
-    position: absolute; /* 保持絕對定位 */
-    left: 30px; /* 距離左邊 30px，你可以自己調整數字看效果 */
-    top: 0;
-    line-height: 80px; /* 跟右邊的選單一樣維持垂直置中 (假設 header 高度是 80px) */
-    font-size: 24px; /* 設定一個好看的標題大小 */
-    margin: 0; /* 清除預設的外距 */
+    text-indent: 0; /* 顯示文字 */
+    background-image: none; /* 移除背景圖 */
+    width: auto; /* 自動寬度 */
+    padding-left: 20px;
+    font-size: 24px;
 }
-
 /* 導覽列容器 */
 header ul {
     position: absolute; /* 固定在 header 右側 */
-    right: 5vw; /* 距離右側5%視窗寬(RWD單位) */
+    right: 5vw; /* 距離右側 5% 視窗寬 */
     top: 0;
     line-height: 80px; /* 與 header 同高 垂直置中 */
 }
@@ -52,12 +48,12 @@ header ul {
 /* 導覽列項目橫排 */
 header li {
     display: inline; /* 讓li 橫向排列 */
-    margin-right: 4vw; /* 每個選單間距(視窗寬度單位) */
+    margin-right: 4vw; /* 每個選單間距 */
 }
 
 /* 導覽連結樣式 */
 header a {
-    color: white; /* 連結文字白色 */
+    color: white;
     text-decoration: none; /* 移除底線 */
 }
 
@@ -68,140 +64,245 @@ header a:hover {
 
 /* Hero Banner區 */
 .news {
-    background-color: antiquewhite; /* 備用底色(圖片載入失敗時) */
-    color: white;
-    height: 80vh; /* 高度=視窗高度80%, Hero 區常用技巧 */
+    background-color: antiquewhite; /* 備用底色 */
+    height: 80vh; /* 高度=視窗高度80% */
     background-image: url("images/banner.png"); /* Banner圖 */
     background-repeat: no-repeat;
     background-size: cover; /* 圖片滿版關鍵 */
     background-position: center; /* 圖片置中裁切 */
-    display: flex; /* 啟用 flex */
+    display: flex;
     flex-direction: column; /* 內容上下排列 */
     align-items: center; /* 水平置中 */
     justify-content: center; /* 垂直置中 */
 }
 
-/* Hero 主標 */
 .news h2 {
     font-size: 60px; /* 大標題 */
     margin-top: 60px;
+    color: #ffffff !important;
 }
 
-/* Hero */
-
-/* 修改 下方footer*/
-footer {
-    background-color: #4a423f; /* 使用跟上方導覽列相近的深褐色 */
-    color: white; /* 文字變白色 */
-    text-align: center; /* 文字置中 */
-    padding: 20px 0; /* 增加上下空間，讓它不要太擁擠 */
-    width: 100%;
+.news p {
+    color: #ffffff !important; /* 淡米色文字 */
+    font-size: 18px;
+    margin: 25px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* --- 標語區塊 (.slogan) 簡單置中 --- */
+.news a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #ACACAC; /* 邊框按鈕 */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* 標語區 */
 .slogan {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f9f6f0; /* 溫暖的淺米色背景 */
+    background-color: #f9f6f0; /* 深綠底 */
+    color: white;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
-    color: #555;
-    line-height: 1.8;
+    line-height: 1.8em; /* 提升段落可讀性 */
 }
 
-/* --- 店鋪資訊 (.shop) 左圖右文 --- */
+/* 針對標語內的文字設定較深的灰色 */
+.slogan blockquote {
+    color: #333333 !important; /* 較黑的灰色，確保顏色能被正確套用 */
+    border: none; /* 移除可能的預設邊框 */
+    margin: 0;
+    font-style: normal; /* 若有預設斜體則取消 */
+}
+
+/* 門市區塊 */
 .shop {
-    display: flex; /* 啟動橫向排列 */
-    align-items: center; /* 垂直置中 */
-    justify-content: center; /* 關鍵1：讓裡面的圖片跟文字在畫面正中間 */
-    gap: 60px; /* 圖片跟文字的間距稍微拉大，配合放大的比例 */
-    padding: 60px 20px;
-    max-width: 1200px; /* 關鍵2：限制整個區塊的最大寬度 */
-    margin: 0 auto; /* 關鍵3：讓這個區塊自己也在網頁正中央 */
+    display: flex; /* 啟用 flex, 讓圖片與文字左右排列 */
 }
 
 .shop img {
-    width: 500px; /* 這裡把圖片固定放大到 500px */
-    border-radius: 10px;
-    flex-shrink: 0; /* 關鍵4：防止螢幕變小時圖片被文字擠壓變形 */
+    width: 50%; /* 圖片佔一半寬度 */
 }
 
-.shop .info {
-    max-width: 500px; /* 讓文字區塊的最大寬度跟圖片差不多，視覺上會最平衡 */
+.info {
+    width: 50%; /* 文字區佔右半 */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* --- 標題與內文放大 --- */
-.shop .info h2 {
-    font-size: 32px; /* 標題放大 */
-    margin-bottom: 15px;
-    color: #333;
+.info h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
 }
 
-.shop .info p {
-    font-size: 18px; /* 內文放大 */
-    line-height: 1.8; /* 增加行距，讓變大的字不會擠在一起 */
-    color: #555;
+.info p {
+    text-align: center;
+    line-height: 2em; /* 行距2倍 */
 }
 
-/* --- 產品卡片區 (.product) 三欄並排 (紅色框框的效果) --- */
+/* 商品展示區 */
 .product {
-    display: flex; /* 啟動橫向排列 */
-    justify-content: space-between; /* 讓卡片左右均勻散開 */
-    gap: 20px; 
-    padding: 60px 10%; /* 上下 60px，左右縮排 10% */
-    background-color: #f5f5f5; /* 淺灰色背景，讓白底卡片凸顯出來 */
+    display: flex; /* 讓子元素橫向排列 */
+    background-color: #ede9db;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 180px 80px;
 }
 
 .product div {
-    background-color: white; /* 卡片白底 */
-    width: 32%; /* 每個卡片佔三分之一左右 */
-    border-radius: 8px; /* 卡片圓角 */
-    overflow: hidden; /* 確保裡面的圖片不會超出圓角 */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 加上淡淡的立體陰影 */
+    width: 300px;
+    text-align: center;
 }
 
 .product img {
     width: 100%;
-    height: 220px; /* 固定圖片高度 */
-    object-fit: cover; /* 自動裁切填滿，圖片不變形 */
-    display: block;
+    border-radius: 10px;
 }
 
 .product h3 {
-    margin: 20px 15px 10px 15px;
     font-size: 20px;
-    color: #333;
+    margin: 20px 0;
 }
 
 .product p {
-    margin: 0 15px 20px 15px;
-    font-size: 15px;
-    color: #666;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.6em;
 }
 
-/* --- 電子報訂閱 (.newsletter) --- */
+/* 電子報區 */
 .newsletter {
-    text-align: center;
-    padding: 60px 20px;
+    background-color: #f9f6f0;
+    color: #333;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .newsletter input {
-    padding: 12px;
-    width: 280px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
+    background-color: transparent;
+    color: #2d5a27;
+    border: 1px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 15px;
 }
 
 .newsletter button {
-    padding: 12px 25px;
-    background-color: #4a423f; /* 配合你 Footer 的深褐色 */
-    color: white;
-    border: none;
-    border-radius: 4px;
+    background-color: #4a423f;
+    color: #DDDDDD;
+    border: 1px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80px;
     cursor: pointer;
 }
 
-.newsletter button:hover {
-    background-color: #332d2b; /* 滑鼠移過去變深一點 */
+input::placeholder {
+    color: #DDDDDD;
+}
+
+input:focus {
+    outline: none;
+    border-color: #E0E9A3;
+}
+
+/* 頁尾區塊 */
+footer {
+    background-color: #351c1a;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* 選單預設隱藏(桌機版) */
+.menu {
+    display: none; 
+}
+
+/* 響應式網頁CSS語法 
+   當螢幕寬度小於或等於768px時套用 */
+@media screen and (max-width: 768px) {
+    /* 隱藏導覽列 */
+    header ul {
+        display: none; 
+    }
+
+    header ul.active {
+        display: block !important;
+        position: absolute;
+        top: 80px; /* header 的高度 */
+        left: 0;
+        width: 100%;
+        background-color: rgba(35, 28, 26, 0.95); /* 深色背景 */
+        text-align: center;
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    header ul.active li {
+        display: block;
+        margin: 15px 0;
+    }
+    
+    /* 調整網站標題(Logo)位置 */
+    header h1 {
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+    
+    /* 手機版時調整 news 區塊標題大小 */
+    .news h2 {
+        font-size: 40px; 
+        color: #ffffff !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* 選單按鈕設定 */
+    .menu {
+        display: block; 
+        background-color: transparent;
+        color: white;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .shop {
+        flex-direction: column; 
+    }
+    
+    .shop img {
+        width: 100%; 
+    }
+    
+    .info {
+        width: 100%;
+        padding: 40px 0; 
+    }
+    
+    .info h2 {
+        font-size: 30px; 
+    }
+    
+    .product {
+        flex-direction: column;
+        padding: 60px 0; 
+    }
+    
+    .product div {
+        margin-bottom: 30px; 
+    }
 }

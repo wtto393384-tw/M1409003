@@ -74,5 +74,16 @@
     <footer>
         <p>Copyright @ 2026 烘焙工坊 All Rights Reserved.</p>
     </footer>
+    <script>
+        // 取得漢堡選單按鈕與選單清單
+        const menuBtn = document.querySelector('.menu');
+        const menuList = document.querySelector('header ul');
+
+        // 監聽按鈕點擊事件
+        menuBtn.addEventListener('click', () => {
+            // 切換 active 類別（有就移除，沒有就加上）
+            menuList.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
